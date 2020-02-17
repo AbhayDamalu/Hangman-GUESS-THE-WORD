@@ -25,7 +25,7 @@ while chance!=0:
         break
     print(f"Chance Remaining :{chance} ")
     print(f"Guess the ALPHABET :-       <<Guessed so far - {guessed}>>")
-    guess=input(">>>")
+    guess=input(">>>").lower()
     while guess not in alphabets or guess in guessed:
         print()
         if guess not in alphabets:
@@ -34,7 +34,7 @@ while chance!=0:
         else:
             print("Already guessed...")
             print("Guess another alphabet :-")
-        guess=input(">>>")
+        guess=input(">>>").lower()
     guessed+=[guess]
     if guess not in secret_word:
         chance-=1
